@@ -65,8 +65,8 @@ Read-only roles can’t modify data, so reporting risks here without privilege e
 ### Reporting the absence of the `X-XSS-Protection` header:
 This header is outdated, as modern browsers no longer support it. A good Content Security Policy (CSP) is more effective.
 
-### Flagging HTTP headers exposing minor metadata: ✅
+### Flagging HTTP headers exposing minor metadata:
 Headers like app version or build number don’t pose a risk unless there’s a related vulnerability to exploit.
 
-### Highlighting predictable user IDs for public profiles: ✅
+### Highlighting predictable user IDs for public profiles:
 Sequential user IDs for public profiles aren’t a security issue if no sensitive data is exposed.
