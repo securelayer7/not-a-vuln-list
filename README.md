@@ -5,64 +5,64 @@ As pentesters and security professionals, we often encounter reports filled with
 
 This is a community-driven list, and we encourage contributions! If you’ve come across similar misunderstood or misreported issues, feel free to submit a pull request to add them here. Together, we can build a comprehensive resource for the security community.
 
-### Suggesting expiration for JWT tokens: ✅
+### Suggesting expiration for JWT tokens:
 JWT tokens are designed to be stateless, with expiration managed as part of their structure. Asking for token revocation without understanding this design doesn’t make sense.
 
-### Reporting race conditions in non-critical updates: ✅
+### Reporting race conditions in non-critical updates:
 Race conditions in things like UI preferences or theme changes don’t impact security. These are usability bugs, not vulnerabilities.
 
-### Flagging session timeout durations as too long: ✅
+### Flagging session timeout durations as too long:
 Some applications need longer sessions for business reasons, like enterprise workflows. This isn’t a vulnerability; it’s a design decision.
 
-### Flagging static error pages revealing minor details: ✅
+### Flagging static error pages revealing minor details:
 Pages showing framework names (like "Powered by Django") or small details aren’t a big risk unless they’re combined with other issues.
 
-### Identifying missing rate limits on non-sensitive APIs: ✅
+### Identifying missing rate limits on non-sensitive APIs:
 Public APIs like product searches don’t handle sensitive data. Missing rate limits here doesn’t pose a real security risk unless it leads to denial of service.
 
-### Reporting non-secure cookies for trivial data: ✅
+### Reporting non-secure cookies for trivial data:
 Cookies storing non-sensitive preferences (e.g., theme=dark) don’t need extra flags like `HttpOnly` or `Secure`. Reporting this is unnecessary.
 
-### Highlighting the lack of CAPTCHA on non-sensitive forms: ✅
+### Highlighting the lack of CAPTCHA on non-sensitive forms:
 Missing CAPTCHA on simple forms like newsletter signups or feedback forms isn’t a security issue; it’s more about spam prevention.
 
-### Reporting clickjacking vulnerabilities on pre-authentication pages: ✅
+### Reporting clickjacking vulnerabilities on pre-authentication pages:
 Clickjacking on login or sign-up pages isn’t relevant if there are no sensitive actions happening before authentication.
 
-### Reporting CSRF vulnerabilities on endpoints protected by API tokens: ✅
+### Reporting CSRF vulnerabilities on endpoints protected by API tokens:
 CSRF can’t work when API requests require tokens that an attacker can’t forge. Reporting this shows a lack of understanding.
 
-### Reporting lack of rate limiting on admin functionalities: ✅
+### Reporting lack of rate limiting on admin functionalities:
 Admin features like email-sending tools are usually restricted to trusted users. Rate limiting here is less critical.
 
-### Reporting CSRF vulnerabilities where `SameSite=None` is used: ✅
+### Reporting CSRF vulnerabilities where `SameSite=None` is used:
 `SameSite=None` isn’t a problem if the app already uses proper token-based CSRF protection.
 
-### Reporting XSS vulnerabilities mitigated by strict CSP: ✅
+### Reporting XSS vulnerabilities mitigated by strict CSP:
 If the app has a solid Content Security Policy (CSP) that blocks harmful scripts, reporting XSS is redundant.
 
-### Reporting sensitive data exposure mitigated by CORS: ✅
+### Reporting sensitive data exposure mitigated by CORS:
 Cross-Origin Resource Sharing (CORS) already protects sensitive data by restricting access to trusted origins.
 
-### Reporting CSRF on APIs protected by Authorization headers: ✅
+### Reporting CSRF on APIs protected by Authorization headers:
 APIs that require Authorization headers are safe from CSRF because those headers can’t be sent cross-origin.
 
-### Reporting CSRF on forms validated by Referer headers: ✅
+### Reporting CSRF on forms validated by Referer headers:
 If a server checks Referer headers to ensure requests come from the right source, CSRF isn’t a concern.
 
-### Reporting DNS rebinding attacks mitigated by IP range validation: ✅
+### Reporting DNS rebinding attacks mitigated by IP range validation:
 DNS rebinding isn’t an issue if the app blocks private/internal IP ranges through validation.
 
-### Reporting open redirect vulnerabilities mitigated by state parameter: ✅
+### Reporting open redirect vulnerabilities mitigated by state parameter:
 OAuth flows with a state parameter protect against misuse. Reporting open redirects in this case is misleading.
 
-### Reporting session hijacking mitigated by short lifetimes: ✅
+### Reporting session hijacking mitigated by short lifetimes:
 Short session durations and refresh tokens minimize the impact of stolen sessions, making exploitation impractical.
 
-### Reporting sensitive data modification risks for users with read-only permissions: ✅
+### Reporting sensitive data modification risks for users with read-only permissions:
 Read-only roles can’t modify data, so reporting risks here without privilege escalation is unnecessary.
 
-### Reporting the absence of the `X-XSS-Protection` header: ✅
+### Reporting the absence of the `X-XSS-Protection` header:
 This header is outdated, as modern browsers no longer support it. A good Content Security Policy (CSP) is more effective.
 
 ### Flagging HTTP headers exposing minor metadata: ✅
