@@ -51,7 +51,7 @@ DNS rebinding isn’t an issue if the app blocks private/internal IP ranges thro
 OAuth flows with a state parameter protect against misuse. Reporting open redirects in this case is misleading.
 
 ### Reporting session hijacking mitigated by short lifetimes:
-Short session durations and refresh tokens minimize the impact of stolen sessions, making exploitation impractical.
+Short session durations and refresh tokens can reduce the window of opportunity for exploitation but don’t inherently prevent session hijacking. If an attacker can automate exploitation immediately, even short-lived sessions can be compromised. Mitigation should focus on securing session tokens with mechanisms like HTTPS, HttpOnly cookies, and additional validation checks, rather than relying solely on short lifetimes.
 
 ### Reporting sensitive data modification risks for users with read-only permissions:
 Read-only roles can’t modify data, so reporting risks here without privilege escalation is unnecessary.
