@@ -38,9 +38,6 @@ Admin features like email-sending tools are usually restricted to trusted users.
 ### Reporting CSRF vulnerabilities where `SameSite=None` is used:
 `SameSite=None` isn’t a problem if the app already uses proper token-based CSRF protection.
 
-### Reporting sensitive data exposure mitigated by CORS:
-Cross-Origin Resource Sharing (CORS) already protects sensitive data by restricting access to trusted origins.
-
 ### Reporting CSRF on APIs protected by Authorization headers:
 APIs that require Authorization headers are safe from CSRF because those headers can’t be sent cross-origin.
 
