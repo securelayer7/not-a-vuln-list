@@ -44,9 +44,6 @@ APIs that require Authorization headers are safe from CSRF because those headers
 ### Reporting CSRF on forms validated by Referer headers:
 If a server relies solely on the Referer header for CSRF protection, it’s a questionable approach. Referer can be stripped or modified by browsers or proxies, making it unreliable. Using the Origin header for validation is a better practice, as it’s more robust and specifically intended for this purpose. Misinterpreting this could lead to overlooking real vulnerabilities.
 
-### Reporting DNS rebinding attacks mitigated by IP range validation:
-DNS rebinding isn’t an issue if the app blocks private/internal IP ranges through validation.
-
 ### Reporting open redirect vulnerabilities mitigated by state parameter:
 OAuth flows with a state parameter protect against misuse. Reporting open redirects in this case is misleading.
 
