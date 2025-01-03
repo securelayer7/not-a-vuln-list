@@ -1,4 +1,4 @@
-# Top 2025 vulnerabilities you shouldn’t accept in a pentest report
+# Top 2025 vulnerabilities you shouldn’t accept in a pentest report [DRAFT]
 
 _We’re finalizing this list and will improve each point with detailed descriptions to ensure clarity and avoid confusion._
 
