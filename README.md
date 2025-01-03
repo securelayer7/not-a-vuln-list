@@ -61,3 +61,6 @@ Headers like app version or build number don’t pose a risk unless there’s a 
 
 ### Highlighting predictable user IDs for public profiles:
 Sequential user IDs for public profiles aren’t a security issue if no sensitive data is exposed.
+
+### Reporting exposed API keys for public services:
+Services like Google Maps or Sentry.io require public API keys to function, as these keys serve as "identity" keys rather than authentication keys. Unless they are misconfigured with sensitive permissions, their exposure does not constitute a vulnerability.
