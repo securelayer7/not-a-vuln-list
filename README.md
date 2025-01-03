@@ -1,5 +1,7 @@
 # Top 2025 vulnerabilities you shouldn’t accept in a pentest report
 
+_We’re finalizing this list and will improve each point with detailed descriptions to ensure clarity and avoid confusion._
+
 ## About This List
 As pentesters and security professionals, we often encounter reports filled with issues that are either not vulnerabilities or don’t pose real security risks. This list aims to highlight commonly misreported issues and explain why they don’t qualify as valid vulnerabilities. By understanding these, we can focus on real threats and save time for both testers and clients.
 
