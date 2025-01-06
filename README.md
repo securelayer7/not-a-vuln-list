@@ -46,9 +46,6 @@ APIs that require Authorization headers are safe from CSRF because those headers
 ### Reporting CSRF on forms validated by Orgin headers:
 If a server relies solely on the Referer header for CSRF protection, it’s a questionable approach. Referer can be stripped or modified by browsers or proxies, making it unreliable. Using the Origin header for validation is a better practice, as it’s more robust and specifically intended for this purpose. Misinterpreting this could lead to overlooking real vulnerabilities.
 
-### Reporting open redirect vulnerabilities mitigated by state parameter:
-OAuth flows with a state parameter protect against misuse. Reporting open redirects in this case is misleading.
-
 ### Reporting session hijacking mitigated by short lifetimes:
 Short session durations and refresh tokens can reduce the window of opportunity for exploitation but don’t inherently prevent session hijacking. If an attacker can automate exploitation immediately, even short-lived sessions can be compromised. Mitigation should focus on securing session tokens with mechanisms like HTTPS, HttpOnly cookies, and additional validation checks, rather than relying solely on short lifetimes.
 
