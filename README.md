@@ -10,7 +10,7 @@ This is a community-driven list, and we encourage contributions! If you’ve com
 ### Suggesting expiration for JWT tokens:
 JWT tokens are designed to be stateless, with expiration managed as part of their structure. Asking for token revocation without understanding this design doesn’t make sense.
 
-### Reporting race conditions in non-critical updates:
+### Reporting race conditions in non-critical form updates:
 Race conditions in things like UI preferences or theme changes don’t impact security. These are usability bugs, not vulnerabilities.
 
 ### Flagging session timeout durations as too long:
