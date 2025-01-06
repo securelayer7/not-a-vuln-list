@@ -14,8 +14,9 @@ JWT tokens are designed to be stateless, with expiration managed as part of thei
 Race conditions in things like UI preferences or theme changes don’t impact security. These are usability bugs, not vulnerabilities.
 
 ### Flagging session timeout durations as too long:
-Some applications need longer sessions for business reasons, like enterprise workflows. This isn’t a vulnerability; it’s a design decision.
+Longer session durations are often intentional, especially in enterprise workflows where usability is a priority. However, pentesters should not assume this is always a design decision. If the timeout is due to a bad default value or poor implementation, it could increase risk.
 
+Rather than excluding this entirely, pentesters should provide context in their reports, allowing customers to assess and accept the risk based on their specific needs and environment.
 ### Flagging static error pages revealing minor details:
 Pages showing framework names (like "Powered by Django") or small details aren’t a big risk unless they’re combined with other issues.
 
