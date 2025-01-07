@@ -64,3 +64,6 @@ Sequential user IDs for public profiles aren’t a security issue if no sensitiv
 
 ### Reporting exposed API keys for public services:
 Services like Google Maps or Sentry.io require public API keys to function, as these keys serve as "identity" keys rather than authentication keys. Unless they are misconfigured with sensitive permissions, their exposure does not constitute a vulnerability.
+
+### Reporting autocomplete in forms: 
+Autocomplete in forms is often flagged as a low/info vulnerability. Modern browsers now often ignore autocomplete="off" for password fields. This behavior is intentional and aimed at improving user security and convenience. Password autocomplete a user-friendly, desired behaviour
