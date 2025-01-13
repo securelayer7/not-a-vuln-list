@@ -59,6 +59,18 @@ Vulnerabilities should be evaluated based on their **impact on the system**, not
 - **Reporting the absence of the `X-XSS-Protection` header**: This header is outdated, as modern browsers no longer support it. A good Content Security Policy (CSP) is more effective.
 
 
+### Disclaimers and Limitations
+
+1. Findings depend on the application’s environment and use case. Assess each issue based on its unique context.  
+2. Minor issues might still matter for compliance or specific business needs (e.g., GDPR, HIPAA).  
+3. Use the list as a guide, not a substitute for thorough analysis or validation.  
+4. Even trivial findings may support a broader layered security strategy.  
+5. CVSS scores are situational; adjust based on specific risks and impact.  
+6. Low-risk issues can highlight areas for improvement and should be communicated constructively.  
+7. The list is community-driven and should evolve to stay relevant.  
+
+
+
 ## Credits
 Contributors who helped refine and improve this document 
 
